@@ -1,0 +1,9 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "1.0.0",
+  "author": "kazu-horie",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
+}
