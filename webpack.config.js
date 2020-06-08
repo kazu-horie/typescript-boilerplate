@@ -12,6 +12,7 @@ module.exports = {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
   },
   module: {
+    // TypeScript compile without type-checking
     rules: [
       {
         test: /\.ts$/,
@@ -21,5 +22,8 @@ module.exports = {
       },
     ],
   },
-  plugins: [new ForkTsCheckerWebpackPlugin()],
+  plugins: [
+    // TypeScript type-checking
+    new ForkTsCheckerWebpackPlugin(),
+  ],
 };
