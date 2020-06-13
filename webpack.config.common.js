@@ -11,9 +11,6 @@ module.exports = {
     extensions: [".wasm", ".mjs", ".js", ".json", ".ts"],
     modules: [path.resolve(__dirname, "src"), "node_modules"],
   },
-  devServer: {
-    contentBase: "./dist",
-  },
   module: {
     // TypeScript compile without type-checking
     rules: [
