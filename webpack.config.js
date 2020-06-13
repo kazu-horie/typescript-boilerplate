@@ -8,8 +8,11 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
-    extensions: [".ts"],
+    extensions: [".wasm", ".mjs", ".js", ".json", ".ts"],
     modules: [path.resolve(__dirname, "src"), "node_modules"],
+  },
+  devServer: {
+    contentBase: "./dist",
   },
   module: {
     // TypeScript compile without type-checking
@@ -24,6 +27,8 @@ module.exports = {
   },
   plugins: [
     // TypeScript type-checking
-    new ForkTsCheckerWebpackPlugin(),
+    new ForkTsCheckerWebpackPlugin({
+      async: false,
+    }),
   ],
 };
