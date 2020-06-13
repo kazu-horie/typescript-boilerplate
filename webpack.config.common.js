@@ -28,6 +28,8 @@ module.exports = {
     new ForkTsCheckerWebpackPlugin({
       async: false,
     }),
-    new HtmlWebpackPlugin({ hash: true }),
+    new HtmlWebpackPlugin({
+      hash: true,
+    }),
   ],
 };
