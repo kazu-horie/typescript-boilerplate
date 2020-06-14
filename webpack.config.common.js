@@ -1,24 +1,33 @@
-const path = require("path");
-const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: './src/index.ts',
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: [".wasm", ".mjs", ".js", ".json", ".ts"],
-    modules: [path.resolve(__dirname, "src"), "node_modules"],
+    extensions: ['.wasm', '.mjs', '.js', '.json', '.ts'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
   module: {
-    // TypeScript compile without type-checking
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          failOnError: true,
+        },
+      },
+      // TypeScript compile without type-checking
       {
         test: /\.ts$/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
     ],
