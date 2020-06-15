@@ -26,8 +26,9 @@ module.exports = {
       // TypeScript compile without type-checking
       {
         test: /\.ts$/,
-        use: {
-          loader: 'babel-loader',
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: true,
         },
       },
     ],
