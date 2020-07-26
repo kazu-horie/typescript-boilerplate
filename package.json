@@ -4,8 +4,9 @@
   "license": "MIT",
   "author": "kazu-horie",
   "scripts": {
+    "start": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
-    "start": "webpack-dev-server --config webpack.config.dev.js"
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
