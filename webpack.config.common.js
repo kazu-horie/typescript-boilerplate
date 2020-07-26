@@ -37,6 +37,7 @@ module.exports = {
     // TypeScript type-checking
     new ForkTsCheckerWebpackPlugin({
       async: false,
+      reportFiles: ['**', '!**/__tests__/**'],
     }),
     new HtmlWebpackPlugin({
       hash: true,
