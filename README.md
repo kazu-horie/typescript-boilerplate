@@ -1,5 +1,7 @@
 # typescript-boilerplate
 
+TypeScript とその他諸々のツールチェインで色々試すためのテンプレ
+
 - TypeScript
 - Webpack
 - Babel
@@ -7,5 +9,3 @@
 - EsLint
 - Prettier
 - Jest
-
-TypeScript とその他諸々のツールチェインで色々試すためのテンプレ
