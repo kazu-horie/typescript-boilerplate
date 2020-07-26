@@ -1,4 +1,6 @@
 dist
 
-webpack.config.*.js
+.eslintrc.js
+prettier.config.js
 babel.config.js
+webpack.config.*.js
