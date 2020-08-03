@@ -40,6 +40,8 @@ module.exports = {
       reportFiles: ['**', '!**/__tests__/**'],
     }),
     new HtmlWebpackPlugin({
+      template: 'index.html',
+      inject: true,
       hash: true,
     }),
   ],
